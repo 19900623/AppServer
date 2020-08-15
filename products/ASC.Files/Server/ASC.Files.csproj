@@ -46,5 +46,6 @@
     <ProjectReference Include="..\Core\ASC.Files.Core.csproj" />
     <ProjectReference Include="..\Service\ASC.Files.Service.csproj" />
     <ProjectReference Include="..\..\..\common\services\ASC.ApiSystem\ASC.ApiSystem.csproj" />
+    <ProjectReference Include="..\..\ASC.People\Server\ASC.People.csproj" />
   </ItemGroup>
 </Project>
