@@ -28,6 +28,12 @@
     <ProjectReference Include="..\..\..\common\ASC.Data.Reassigns\ASC.Data.Reassigns.csproj" />
     <ProjectReference Include="..\..\..\common\ASC.MessagingSystem\ASC.MessagingSystem.csproj" />
     <ProjectReference Include="..\..\..\web\ASC.Web.Core\ASC.Web.Core.csproj" />
+    <ProjectReference Include="..\..\ASC.Files\Service\ASC.Files.Service.csproj" />
+    <ProjectReference Include="..\..\ASC.Files\Server\ASC.Files.csproj" />
+    <ProjectReference Include="..\..\..\common\services\ASC.Studio.Notify\ASC.Studio.Notify.csproj" />
+    <ProjectReference Include="..\..\..\common\services\ASC.UrlShortener.Svc\ASC.UrlShortener.Svc.csproj" />
+    <ProjectReference Include="..\..\..\common\services\ASC.ApiSystem\ASC.ApiSystem.csproj" />
+    <ProjectReference Include="..\..\..\web\ASC.Web.Api\ASC.Web.Api.csproj" />
   </ItemGroup>
   
   <ItemGroup>
