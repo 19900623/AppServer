@@ -28,7 +28,7 @@
     <ProjectReference Include="..\..\..\common\ASC.Data.Reassigns\ASC.Data.Reassigns.csproj" />
     <ProjectReference Include="..\..\..\common\ASC.MessagingSystem\ASC.MessagingSystem.csproj" />
     <ProjectReference Include="..\..\..\web\ASC.Web.Core\ASC.Web.Core.csproj" />
-    <ProjectReference Include="..\..\..\common\services\ASC.Studio.Notify\ASC.Studio.Notify.csproj" />
+    <ProjectReference Include="..\..\ASC.Files\Server\ASC.Files.csproj" />
   </ItemGroup>
   
   <ItemGroup>
