@@ -35,10 +35,6 @@
     <ProjectReference Include="..\..\common\ASC.Data.Reassigns\ASC.Data.Reassigns.csproj" />
     <ProjectReference Include="..\ASC.Web.Core\ASC.Web.Core.csproj" />
     <ProjectReference Include="..\..\products\ASC.People\Server\ASC.People.csproj" />
-    <ProjectReference Include="..\..\products\ASC.Files\Service\ASC.Files.Service.csproj" />
-    <ProjectReference Include="..\..\products\ASC.Files\Server\ASC.Files.csproj" />
-    <ProjectReference Include="..\..\common\services\ASC.Studio.Notify\ASC.Studio.Notify.csproj" />
-    <ProjectReference Include="..\..\common\services\ASC.ApiSystem\ASC.ApiSystem.csproj" />
   </ItemGroup>
 
   <ItemGroup>
