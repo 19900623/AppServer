@@ -11,6 +11,7 @@
     <ProjectReference Include="..\..\..\common\services\ASC.ElasticSearch\ASC.ElasticSearch.csproj" />
     <ProjectReference Include="..\..\..\common\services\ASC.Feed.Aggregator\ASC.Feed.Aggregator.csproj" />
     <ProjectReference Include="..\Core\ASC.Files.Core.csproj" />
+    <ProjectReference Include="..\..\ASC.People\Server\ASC.People.csproj" />
   </ItemGroup>
 
 </Project>
