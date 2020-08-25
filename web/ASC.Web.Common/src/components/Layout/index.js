@@ -186,11 +186,13 @@ class Layout extends React.Component {
             badgeNumber={this.state.totalNotifications}
             onClick={this.showNav}
             onLogoClick={this.state.onLogoClick}
+            mainModules={this.state.mainModules}
             currentModule={this.state.currentModule}
+            
           />
           : <HeaderUnauth t={this.props.t}>{this.props.children}</HeaderUnauth>
         }
-        {this.state.isNavAvailable && (
+        {/* {this.state.isNavAvailable && (
           <Nav
             opened={this.state.isNavOpened}
             onMouseEnter={this.handleNavMouseEnter}
@@ -220,7 +222,7 @@ class Layout extends React.Component {
               </NavItem>
             ))}
           </Nav>
-        )}
+        )} */}
         {this.state.isAsideAvailable && (
           <Aside
             visible={this.state.isAsideVisible}
