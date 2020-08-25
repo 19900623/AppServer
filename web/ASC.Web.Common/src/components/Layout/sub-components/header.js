@@ -1,9 +1,10 @@
 import React from "react";
+import { ReactSVG } from 'react-svg';
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import NavItem from "./nav-item";
 import Headline from "../../Headline";
-import { utils } from "asc-web-components";
+import { utils, Icons } from "asc-web-components";
 const { desktop } = utils.device;
 
 const backgroundColor = "#0F4071";
@@ -42,7 +43,7 @@ const Header = styled.header`
     width: 146px;
     height: 24px;
     position: relative;
-    padding: 4px 20px 0 6px;
+    padding: 4px 20px 0 24px;
     cursor: pointer;
     @media (max-width: 620px) {
       display: ${props => (props.module ? "none" : "block")};
@@ -56,12 +57,6 @@ const HeaderComponent = React.memo(props => {
   const currentModule = props.currentModule && props.currentModule.title;
   return (
     <Header module={currentModule}>
-      <NavItem
-        iconName="MenuIcon"
-        badgeNumber={props.badgeNumber}
-        onClick={props.onClick}
-        noHover={true}
-      />
       <a className="header-logo-wrapper" href="/">
         <img className="header-logo-min_icon" src="images/nav.logo.react.svg" />
         <img
@@ -69,6 +64,25 @@ const HeaderComponent = React.memo(props => {
           src="images/nav.logo.opened.react.svg"
         />
       </a>
+      {/* <NavItem
+        iconName="MenuIcon"
+        badgeNumber={props.badgeNumber}
+        onClick={props.onClick}
+        noHover={true}
+      /> */}
+      {props.mainModules.map(item => <React.Fragment key={item.id}><NavItem separator={!!item.separator}
+        //opened={this.state.isNavOpened}
+        //active={item.id == this.state.currentModuleId}
+        iconName={item.iconName}
+        iconUrl={item.iconUrl}
+        badgeNumber={item.notifications}
+        onClick={item.onClick}
+        onBadgeClick={e => {
+          this.toggleAside();
+          item.onBadgeClick(e);
+        }}
+        url={item.url} />
+      </React.Fragment>)}
       <Headline className="header-module-title" type="header" color="#FFF">
         {props.currentModule && props.currentModule.title}
       </Headline>
