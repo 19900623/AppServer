@@ -59,10 +59,9 @@ const getAvailableModules = (modules, currentUser) => {
 
   const isUserAdmin = currentUser.isAdmin;
   const customModules = getCustomModules(isUserAdmin);
-  const separator = getSeparator("nav-products-separator");
   const products = modules.map(m => toModuleWrapper(m));
 
-  return [separator, ...products, ...customModules];
+  return [...products, ...customModules];
 };
 
 const StudioLayoutContainer = withTranslation()(PureStudioLayout);
