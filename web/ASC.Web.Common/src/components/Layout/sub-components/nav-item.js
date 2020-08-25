@@ -1,8 +1,8 @@
 import React from "react";
-import { ReactSVG } from 'react-svg'
+import { ReactSVG } from 'react-svg';
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { Badge, Icons, Link, Text } from "asc-web-components";
+import { Badge, Icons, Link } from "asc-web-components";
 
 const baseColor = "#7A95B0",
   activeColor = "#FFFFFF",
@@ -37,10 +37,6 @@ const NavItemWrapper = styled(Link)`
   }
 `;
 
-const NavItemLabel = styled(Text)`
-  margin: 0 auto 0 16px;
-  display: ${props => (props.opened ? "block" : "none")};
-`;
 
 const badgeCss = css`
   position: absolute;
@@ -61,7 +57,6 @@ const NavItem = React.memo(props => {
     active,
     iconName,
     iconUrl,
-    children,
     badgeNumber,
     onClick,
     onBadgeClick,
@@ -71,7 +66,7 @@ const NavItem = React.memo(props => {
   const color = active ? activeColor : baseColor;
 
   return separator ? (
-    <NavItemSeparator />
+    <NavItemSeparator/>
   ) : (
       <NavItemWrapper
         noHover={noHover}
@@ -82,26 +77,22 @@ const NavItem = React.memo(props => {
           ? (<ReactSVG
             src={iconUrl}
             beforeInjection={svg => {
-              svg.setAttribute('style', `width: 24px; height: 24px;`);
+              svg.setAttribute('style', `width: 16px; height: 16px;`);
               svg.setAttribute('fill', color);
             }}
           />)
           : React.createElement(Icons[iconName], {
-            size: "big",
+            size: "medium",
             isfill: true,
             color: color
           })}
-        {children && (
-          <NavItemLabel opened={opened} color={color} fontSize="16px" fontWeight="bold" truncate>
-            {children}
-          </NavItemLabel>
-        )}
         <NavItemBadge
           opened={opened}
           label={badgeNumber}
           onClick={onBadgeClick}
         />
       </NavItemWrapper>
+
     );
 });
 
